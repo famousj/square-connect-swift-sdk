@@ -1,0 +1,2 @@
+#!/bin/bash
+exec java -jar -Dmodels /usr/local/Cellar/swagger-codegen/3.0.14/libexec/swagger-codegen-cli.jar "$@"
