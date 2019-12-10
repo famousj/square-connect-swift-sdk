@@ -49,9 +49,9 @@ public struct V1Merchant: Codable, Identifiable {
     /** Additional information for a single-location account specified by its associated business account, if it has one. */
     public let locationDetails: V1MerchantLocationDetails?
     /** The URL of the merchant&#39;s online store. */
-    public let marketUrl: URL?
+    public let marketUrl: String?
 
-    public init(id: String?, name: String?, email: String?, accountType: V1MerchantAccountType?, accountCapabilities: [String]?, countryCode: String?, languageCode: String?, currencyCode: String?, businessName: String?, businessAddress: Address?, businessPhone: V1PhoneNumber?, businessType: V1MerchantBusinessType?, shippingAddress: Address?, locationDetails: V1MerchantLocationDetails?, marketUrl: URL?) {
+    public init(id: String?, name: String?, email: String?, accountType: V1MerchantAccountType?, accountCapabilities: [String]?, countryCode: String?, languageCode: String?, currencyCode: String?, businessName: String?, businessAddress: Address?, businessPhone: V1PhoneNumber?, businessType: V1MerchantBusinessType?, shippingAddress: Address?, locationDetails: V1MerchantLocationDetails?, marketUrl: String?) {
         self.id = id
         self.name = name
         self.email = email

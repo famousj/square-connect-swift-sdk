@@ -31,9 +31,9 @@ public struct V1Payment: Codable, Identifiable {
     /** The device that took the payment. */
     public let device: Device?
     /** The URL of the payment&#39;s detail page in the merchant dashboard. The merchant must be signed in to the merchant dashboard to view this page. */
-    public let paymentUrl: URL?
+    public let paymentUrl: String?
     /** The URL of the receipt for the payment. Note that for split tender payments, this URL corresponds to the receipt for the first tender listed in the payment&#39;s tender field. Each Tender object has its own receipt_url field you can use to get the other receipts associated with a split tender payment. */
-    public let receiptUrl: URL?
+    public let receiptUrl: String?
     /** The sum of all inclusive taxes associated with the payment. */
     public let inclusiveTaxMoney: V1Money?
     /** The sum of all additive taxes associated with the payment. */
@@ -75,7 +75,7 @@ public struct V1Payment: Codable, Identifiable {
     /** Indicates whether or not the payment is only partially paid for. If true, this payment will have the tenders collected so far, but the itemizations will be empty until the payment is completed. */
     public let isPartial: Bool?
 
-    public init(id: String?, merchantId: String?, createdAt: String?, creatorId: String?, device: Device?, paymentUrl: URL?, receiptUrl: URL?, inclusiveTaxMoney: V1Money?, additiveTaxMoney: V1Money?, taxMoney: V1Money?, tipMoney: V1Money?, discountMoney: V1Money?, totalCollectedMoney: V1Money?, processingFeeMoney: V1Money?, netTotalMoney: V1Money?, refundedMoney: V1Money?, swedishRoundingMoney: V1Money?, grossSalesMoney: V1Money?, netSalesMoney: V1Money?, inclusiveTax: [V1PaymentTax]?, additiveTax: [V1PaymentTax]?, tender: [V1Tender]?, refunds: [V1Refund]?, itemizations: [V1PaymentItemization]?, surchargeMoney: V1Money?, surcharges: [V1PaymentSurcharge]?, isPartial: Bool?) {
+    public init(id: String?, merchantId: String?, createdAt: String?, creatorId: String?, device: Device?, paymentUrl: String?, receiptUrl: String?, inclusiveTaxMoney: V1Money?, additiveTaxMoney: V1Money?, taxMoney: V1Money?, tipMoney: V1Money?, discountMoney: V1Money?, totalCollectedMoney: V1Money?, processingFeeMoney: V1Money?, netTotalMoney: V1Money?, refundedMoney: V1Money?, swedishRoundingMoney: V1Money?, grossSalesMoney: V1Money?, netSalesMoney: V1Money?, inclusiveTax: [V1PaymentTax]?, additiveTax: [V1PaymentTax]?, tender: [V1Tender]?, refunds: [V1Refund]?, itemizations: [V1PaymentItemization]?, surchargeMoney: V1Money?, surcharges: [V1PaymentSurcharge]?, isPartial: Bool?) {
         self.id = id
         self.merchantId = merchantId
         self.createdAt = createdAt

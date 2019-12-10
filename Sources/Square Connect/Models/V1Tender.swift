@@ -29,7 +29,7 @@ public struct V1Tender: Codable, Identifiable {
     /** The ID of the employee that processed the tender. */
     public let employeeId: String?
     /** The URL of the receipt for the tender. */
-    public let receiptUrl: URL?
+    public let receiptUrl: String?
     /** The brand of credit card provided. See [V1TenderCardBrand](#type-v1tendercardbrand) for possible values */
     public let cardBrand: V1TenderCardBrand?
     /** The last four digits of the provided credit card&#39;s account number. */
@@ -53,7 +53,7 @@ public struct V1Tender: Codable, Identifiable {
     /** Indicates whether or not the tender is associated with an exchange. If is_exchange is true, the tender represents the value of goods returned in an exchange not the actual money paid. The exchange value reduces the tender amounts needed to pay for items purchased in the exchange. */
     public let isExchange: Bool?
 
-    public init(id: String?, type: V1TenderType?, name: String?, employeeId: String?, receiptUrl: URL?, cardBrand: V1TenderCardBrand?, panSuffix: String?, entryMethod: V1TenderEntryMethod?, paymentNote: String?, totalMoney: V1Money?, tenderedMoney: V1Money?, tenderedAt: String?, settledAt: String?, changeBackMoney: V1Money?, refundedMoney: V1Money?, isExchange: Bool?) {
+    public init(id: String?, type: V1TenderType?, name: String?, employeeId: String?, receiptUrl: String?, cardBrand: V1TenderCardBrand?, panSuffix: String?, entryMethod: V1TenderEntryMethod?, paymentNote: String?, totalMoney: V1Money?, tenderedMoney: V1Money?, tenderedAt: String?, settledAt: String?, changeBackMoney: V1Money?, refundedMoney: V1Money?, isExchange: Bool?) {
         self.id = id
         self.type = type
         self.name = name

@@ -23,9 +23,9 @@ public struct V1ItemImage: Codable, Identifiable {
     /** The image&#39;s unique ID. */
     public let id: String?
     /** The image&#39;s publicly accessible URL. */
-    public let url: URL?
+    public let url: String?
 
-    public init(id: String?, url: URL?) {
+    public init(id: String?, url: String?) {
         self.id = id
         self.url = url
     }

@@ -49,7 +49,7 @@ public struct Location: Codable, Identifiable {
     /** The location&#39;s type, as set by the account owner in the Square dashboard. Typically used to indicate whether or not the location object represents a physical space like a building or mall space. See [LocationType](#type-locationtype) for possible values */
     public let type: LocationType?
     /** The location&#39;s website, as set by the account owner in the Square dashboard.  Default: none; only exists if explicitly set. */
-    public let websiteUrl: URL?
+    public let websiteUrl: String?
     /**   The hours of operation for a business location.  Default: none; only exists if explicitly set. */
     public let businessHours: BusinessHours?
     /** The email of the location. */
@@ -61,15 +61,15 @@ public struct Location: Codable, Identifiable {
     /** The Instagram username of the location without the &#39; */
     public let instagramUsername: String?
     /** The Facebook profile URL of the location. The URL should begin with &#39;facebook.com/&#39;. */
-    public let facebookUrl: URL?
+    public let facebookUrl: String?
     /** The physical coordinates (latitude and longitude) of the location. */
     public let coordinates: Coordinates?
     /** The logo image URL of the location. */
-    public let logoUrl: URL?
+    public let logoUrl: String?
     /** The Point of Sale background image URL of the location. */
-    public let posBackgroundUrl: URL?
+    public let posBackgroundUrl: String?
 
-    public init(id: String?, name: String?, address: Address?, timezone: String?, capabilities: [LocationCapability]?, status: LocationStatus?, createdAt: String?, merchantId: String?, country: Country?, languageCode: String?, currency: Currency?, phoneNumber: String?, businessName: String?, type: LocationType?, websiteUrl: URL?, businessHours: BusinessHours?, businessEmail: String?, _description: String?, twitterUsername: String?, instagramUsername: String?, facebookUrl: URL?, coordinates: Coordinates?, logoUrl: URL?, posBackgroundUrl: URL?) {
+    public init(id: String?, name: String?, address: Address?, timezone: String?, capabilities: [LocationCapability]?, status: LocationStatus?, createdAt: String?, merchantId: String?, country: Country?, languageCode: String?, currency: Currency?, phoneNumber: String?, businessName: String?, type: LocationType?, websiteUrl: String?, businessHours: BusinessHours?, businessEmail: String?, _description: String?, twitterUsername: String?, instagramUsername: String?, facebookUrl: String?, coordinates: Coordinates?, logoUrl: String?, posBackgroundUrl: String?) {
         self.id = id
         self.name = name
         self.address = address
